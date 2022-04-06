@@ -10,9 +10,9 @@ const typeDefs = gql`
         username: String
         reactionCount: Int
     }
-    
+
     type Query {
-        thoughts: [Thought]
+        thoughts(username: String): [Thought]
     }
 `;
 
