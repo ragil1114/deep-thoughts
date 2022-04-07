@@ -1,6 +1,7 @@
 const { User, Thought } = require('../models');
 
 const resolvers = {
+    // nested Object
     Query: {
         // get all users
         users: async () => {
