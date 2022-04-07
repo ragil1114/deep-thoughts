@@ -5,16 +5,16 @@ const resolvers = {
         // get all users
         users: async () => {
             return User.find()
-            .select('-__v -password')
-            .populate('friends')
-            .populate('thoughts');
+              .select('-__v -password')
+              .populate('friends')
+              .populate('thoughts');
         },
         // get a user by username
         user: async (parent, { username }) => {
             return User.findOne({ username })
-            .select('-__v -password')
-            .populate('friends')
-            .populate('thoughts');
+              .select('-__v -password')
+              .populate('friends')
+              .populate('thoughts');
         },
         // get all thoughts for a user
         thoughts: async (parent, { username }) => {
